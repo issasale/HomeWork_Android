@@ -19,9 +19,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //5.1
-        analyzeIntList(listOf(67, -14, 22, -8, 15))
-
         // 5.2
         checkPassword("A")
 
@@ -54,26 +51,6 @@ fun GreetingPreview() {
     MyApplicationTheme {
         Greeting("Android")
     }
-}
-
-// ======================
-// 5.1
-// ======================
-
-fun analyzeIntList(input: List<Int>) {
-
-    val min = input.minOrNull()
-    val max = input.maxOrNull()
-    val sum = input.sum()
-
-    val evenCount = input.count { it % 2 == 0 }
-    val oddCount = input.count { it % 2 != 0 }
-
-    Log.d("HOMEWORK", "Минимальное: $min")
-    Log.d("HOMEWORK", "Максимальное: $max")
-    Log.d("HOMEWORK", "Сумма: $sum")
-    Log.d("HOMEWORK", "Четных: $evenCount")
-    Log.d("HOMEWORK", "Нечетных: $oddCount")
 }
 
 // ======================
