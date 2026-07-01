@@ -22,8 +22,6 @@ class MainActivity : ComponentActivity() {
         //5.1
         analyzeIntList(listOf(67, -14, 22, -8, 15))
 
-        // 5.2
-        checkPassword("A")
 
         enableEdgeToEdge()
 
@@ -76,28 +74,3 @@ fun analyzeIntList(input: List<Int>) {
     Log.d("HOMEWORK", "Нечетных: $oddCount")
 }
 
-// ======================
-// 5.2
-// ======================
-
-fun checkPassword(password: String) {
-
-    var score = 0
-
-    if (password.length >= 8) score++
-
-    if (password.any { it.isDigit() }) score++
-
-    if (password.any { it.isUpperCase() }) score++
-
-    if (password.any { it.isLowerCase() }) score++
-
-    if (password.any { !it.isLetterOrDigit() }) score++
-
-    when (score) {
-        5 -> Log.d("PASSWORD", "Надежность пароля: надежный")
-        4 -> Log.d("PASSWORD", "Надежность пароля: хороший")
-        2, 3 -> Log.d("PASSWORD", "Надежность пароля: средняя")
-        else -> Log.d("PASSWORD", "Надежность пароля: ненадежный")
-    }
-}
